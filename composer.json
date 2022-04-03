@@ -22,7 +22,6 @@
         }
     },
     "replace": {
-        "svenlie/chatbot-frontend": "self.version",
         "typo3-ter/chatbot-frontend": "self.version"
     }
 }

@@ -14,7 +14,8 @@
         }
     },
     "require": {
-        "typo3/cms-core": "^11.5"
+        "typo3/cms-core": "^11.5",
+        "svenlie/chatbots": "dev-main"
     },
     "autoload": {
         "psr-4": {

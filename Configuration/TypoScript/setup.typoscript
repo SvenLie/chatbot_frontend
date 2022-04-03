@@ -1,0 +1,41 @@
+plugin.tx_chatbotfrontend {
+  view {
+    layoutRootPaths.0 = EXT:chatbot_frontend/Resources/Private/Layouts
+    templateRootPaths.0 = EXT:chatbot_frontend/Resources/Private/Templates
+    partialsRootPaths.0 = EXT:chatbot_frontend/Resources/Private/Partials
+  }
+}
+
+tx_chatbotfrontend = PAGE
+tx_chatbotfrontend {
+  typeNum = 1639404991
+  10 = USER
+  	10 {
+  		userFunc = TYPO3\CMS\Extbase\Core\Bootstrap->run
+  		extensionName = ChatbotFrontend
+  		pluginName = Chatbot
+  		vendorName = SvenLie
+  		controller = Chatbot
+
+  		view =< plugin.tx_chatbotfrontend.view
+  	}
+}
+
+page.99 = COA
+page.99 {
+	10 = COA
+	10 {
+		10 < tx_chatbotfrontend.10
+	}
+}
+
+page {
+  includeJS {
+	  chatbot = EXT:chatbot_frontend/Resources/Public/JavaScript/Chatbot.js
+	  fontawesome = https://kit.fontawesome.com/d7e14bbebb.js
+	  fontawesome.external = 1
+	}
+	includeCSS {
+	  chatbot = EXT:chatbot_frontend/Resources/Public/Css/Chatbot.css
+	}
+}

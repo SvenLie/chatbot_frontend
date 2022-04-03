@@ -1,0 +1,28 @@
+{
+    "name": "svenlie/chatbot-frontend",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+      {
+        "name": "Sven Liebert",
+        "email": "mail@sven-liebert.de"
+      }
+    ],
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "chatbot_frontend"
+        }
+    },
+    "require": {
+        "typo3/cms-core": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "SvenLie\\ChatbotFrontend\\": "Classes"
+        }
+    },
+    "replace": {
+        "svenlie/chatbot-frontend": "self.version",
+        "typo3-ter/chatbot-frontend": "self.version"
+    }
+}
